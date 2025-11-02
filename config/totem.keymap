@@ -75,8 +75,8 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
 &mt ADJ ESC     &kp Q      &kp W   &kp F     &kp P     &kp b   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp minus
-&mo NAV     &kp A      &kp R   &kp S     &kp T     &kp g   &kp m      &kp N            &kp E         &kp I           &kp O              &kp SQT
-&kp tab  &kp Z      &kp X   &kp C     &kp d     &kp v   &kp K      &kp h            &kp COMMA     &kp DOT         &kp FSLH           &kp DEL
+&mo NAV     &kp A      &kp R   &kp S     &kp T     &kp g   &kp m           &kp N      &kp E         &kp I           &kp O              &kp SQT
+&kp tab     &kp Z      &kp X       &kp C       &kp d        &kp v          &kp K      &kp H         &kp COMMA     &kp DOT    &kp FSLH    &kp DEL
                                          &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &mt LALT RET       &kp BSPC     &kp LSHIFT       
                         >;
                 };
@@ -92,8 +92,8 @@ label= "NAVI"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 &trans  &kp INS    &kp PSCRN  &kp LC(PG_UP)  &kp LC(PG_DN)  &trans   &kp PG_UP  &kp LC(LEFT_ARROW)  &kp UP     &kp LC(RIGHT_ARROW)  &trans     &trans
-&trans  &kp LALT   &kp LSHIFT    &kp LCTRL      &kp LGUI      &kp ESC  &kp PG_DN  &kp LEFT            &kp DOWN   &kp UP            &kp RIGHT   &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)      &kp LC(V)      &trans   &trans     &kp HOME            &trans     &kp END               &trans     &trans
+&trans         &kp LALT      &kp LSHIFT    &kp LCTRL  &kp LGUI    &kp ESC  &kp PG_DN       &kp LEFT   &kp DOWN     &kp UP       &kp RIGHT   &trans
+&trans         &kp LC(Z)     &kp LC(X)  &kp LC(C)      &kp LC(V)      &trans   &trans     &kp HOME            &trans     &kp END               &trans     &trans
                               &trans         &trans         &trans   &kp RET    &trans              &trans     
                         >;
                 };
