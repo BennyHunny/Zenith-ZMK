@@ -20,6 +20,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define NUM  4
 
 &mt {
   quick-tap-ms = <100>;
@@ -30,14 +31,14 @@
 
 / {
     
-    conditional_layers {
+    /* conditional_layers {
         compatible = "zmk,conditional-layers";
 
         adjust_layer {
             if-layers = <NAV SYM>;
             then-layer = <ADJ>;
         };
-    };
+    }; */
 
     combos {
             compatible = "zmk,combos";
@@ -76,7 +77,7 @@ label= "BASE"                              ;
 
 &mt ADJ ESC     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp MINUS
 &mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &kp SQT
-&kp TAB     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &kp DOT    &kp FSLH    &kp DEL
+&mo NUM     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &kp DOT    &kp FSLH    &mo SYM
                                          &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &mt LALT RET       &kp BSPC     &kp LSHIFT
                         >;
                 };
@@ -129,7 +130,23 @@ label= "ADJ"                               ;
 &trans         &trans      &trans      &trans      &trans      &trans      &trans  &kp K_PREV  &kp K_NEXT          &trans  &trans         &trans
 &bootloader        &trans             &trans             &trans        &trans        &trans        &trans  &kp K_PP    &trans              &trans  &trans         &bootloader
 &bt BT_CLR         &bt BT_SEL 0       &bt BT_SEL 1       &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans  &trans      &trans              &trans  &trans         &trans
-                   &trans             &trans             &trans        &trans        &trans        &trans                 
+                   &trans             &trans             &trans        &trans        &trans        &trans
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                numpad_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "NUM"                               ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+&trans  &trans     &trans     &trans     &trans     &trans      &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_MINUS   &trans
+&trans  &trans     &trans     &trans     &trans     &trans      &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp KP_PLUS    &trans
+&trans  &trans     &trans     &trans     &trans     &trans      &kp N0           &kp N1  &kp N2  &kp N3  &kp KP_DOT     &trans
+                              &trans     &trans     &trans      &trans           &trans  &trans
                         >;
                 };
         };
