@@ -47,6 +47,24 @@
                 key-positions = <0 1>;
                 bindings = <&kp ESC>;
             };
+
+            combo_delete {
+                timeout-ms = <50>;
+                key-positions = <38 40>;
+                bindings = <&kp DEL>;
+            };
+
+            combo_enter {
+                timeout-ms = <50>;
+                key-positions = <19 20 21>;
+                bindings = <&kp RET>;
+           };
+
+           combo_tab {
+               timeout-ms = <50>;
+               key-positions = <31 32 33>;
+               bindings = <&kp TAB>;
+
     };
 
     macros {
@@ -75,7 +93,7 @@ label= "BASE"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-&kp ESC     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &mo ADJ
+&mo ADJ     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp MINUS
 &mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &kp SQT
 &mo NUM     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &kp DOT    &kp FSLH    &mo SYM
                                          &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &mt LALT RET       &kp BSPC     &kp LSHIFT
