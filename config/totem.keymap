@@ -50,7 +50,7 @@
 
             combo_delete {
                 timeout-ms = <50>;
-                key-positions = <35 36>;
+                key-positions = <34 35>;
                 bindings = <&kp DEL>;
             };
 
