@@ -107,7 +107,7 @@ label= "BASE"                              ;
 &mo ADJ     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp MINUS
 &mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &kp SQT
 &mo SYM     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &kp DOT    &kp FSLH    &mo SYM
-                                         &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &kp LALT       &kp BSPC     &mt &skshift_left
+                                         &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &kp LALT       &kp BSPC     &skshift_left
                         >;
                 };
 
