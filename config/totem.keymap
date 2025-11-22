@@ -48,6 +48,16 @@
               tapping-term-ms = <200>;
               quick-tap-ms = <125>;
               bindings = <&kp>, <&sk>;
+
+as: auto_shift {
+      compatible = "zmk,behavior-hold-tap";
+      label = "AUTO_SHIFT";
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+
           };
      }; 
 
@@ -104,9 +114,9 @@ label= "BASE"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-&mo ADJ     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &kp SEMI           &kp MINUS
-&mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &kp SQT
-&mo SYM     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &kp DOT    &kp FSLH    &mo SYM
+&mo ADJ     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &as LS(SEMI) SEMI           &kp MINUS
+&mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &as LS(SQT) SQT
+&mo SYM     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &as LS(DOT) DOT    &as LS(FSLH) FSLH    &mo SYM
                                          &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &kp LALT       &kp BSPC     &skshift_left LSHIFT LSHIFT
                         >;
                 };
@@ -141,7 +151,7 @@ label= "SYM"                               ;
 
 &kp GRAVE  &kp EXCL  &kp AT   &kp LBKT  &kp RBKT   &kp AT    &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_MINUS   &trans
 &kp TILDE   &kp HASH   &kp DLLR  &kp LPAR  &kp RPAR     &kp LBRC  &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp KP_PLUS    &kp EQUAL
-&kp EQUAL  &kp PRCNT     &kp CARET    &kp AMPS     &kp STAR     &kp STAR   &kp N0           &kp N1  &kp N2  &kp N3  &kp DOT     &trans
+&kp EQUAL  &kp PRCNT     &kp CARET    &kp AMPS     &kp STAR     &kp BSLH   &kp N0           &kp N1  &kp N2  &kp N3  &kp DOT     &trans
                              &trans     &trans     &trans    &trans        &trans     &trans       
                         >;
                 };
