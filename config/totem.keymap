@@ -48,7 +48,7 @@
               tapping-term-ms = <200>;
               quick-tap-ms = <125>;
               bindings = <&kp>, <&sk>;
-
+};
 as: auto_shift {
       compatible = "zmk,behavior-hold-tap";
       label = "AUTO_SHIFT";
