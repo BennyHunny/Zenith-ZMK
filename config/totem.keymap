@@ -21,6 +21,7 @@
 #define SYM  2
 #define ADJ  3
 #define NUM  4
+#define MOUSE 5
 
 &mt {
   quick-tap-ms = <100>;
@@ -115,7 +116,7 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
 &mo ADJ     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &as LS(SEMI) SEMI           &mo NUM
-&mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &as LS(SQT) SQT
+&mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &tog MOUSE
 &mo SYM     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &as LS(DOT) DOT    &as LS(FSLH) FSLH    &mo SYM
                                          &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &kp LALT       &kp BSPC     &skshift_left LSHIFT LSHIFT
                         >;
@@ -188,5 +189,22 @@ label= "NUM"                               ;
                               &trans     &trans     &trans      &trans           &trans  &trans
                         >;
                 };
-        };
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+                  mouse_layer {
+  // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+  label= "MOUSE"                             ;
+  // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+   bindings = <
+  // ╷           ╷           ╷           ╷           ╷           ╷           ╷ ╷           ╷           ╷           ╷           ╷           ╷           ╷
+  &trans          &trans     &trans     &trans     &trans     &trans      &trans          &trans      &trans          &trans      &trans     &trans
+  &trans          &trans     &trans     &trans     &trans     &trans      &trans          &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT     &tog MOUSE
+  &trans          &trans     &trans     &trans     &trans     &trans      &trans          &mkp LCLK   &mkp RCLK          &trans      &trans     &trans
+                                &trans     &trans     &trans      &trans       &trans     &trans 
+                          >;
+                  };
+
+
+};
 };
