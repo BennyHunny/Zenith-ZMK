@@ -114,7 +114,7 @@ label= "BASE"                              ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-&mo ADJ     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &as LS(SEMI) SEMI           &kp MINUS
+&mo ADJ     &kp Q      &kp W   &kp F     &kp P     &kp B   &kp J      &kp L            &kp U         &kp Y           &as LS(SEMI) SEMI           &mo NUM
 &mo NAV     &kp A      &kp R   &kp S     &kp T     &kp G   &kp M           &kp N      &kp E         &kp I           &kp O              &as LS(SQT) SQT
 &mo SYM     &kp Z      &kp X       &kp C       &kp D        &kp V          &kp K      &kp H         &kp COMMA     &as LS(DOT) DOT    &as LS(FSLH) FSLH    &mo SYM
                                          &kp LCTRL  &kp SPACE  &kp LEFT_GUI  &kp LALT       &kp BSPC     &skshift_left LSHIFT LSHIFT
@@ -149,8 +149,8 @@ label= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-&kp GRAVE  &kp EXCL  &kp AT   &kp LBKT  &kp RBKT   &kp AT    &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_MINUS   &trans
-&kp TILDE   &kp HASH   &kp DLLR  &kp LPAR  &kp RPAR     &kp LBRC  &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp KP_PLUS    &kp EQUAL
+&kp GRAVE  &kp EXCL  &kp AT   &kp LBKT  &kp RBKT   &as LS(MINUS) MINUS    &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_MINUS   &trans
+&kp TILDE   &kp HASH   &kp DLLR  &kp LPAR  &kp RPAR     &as LS(SQT) SQT  &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp KP_PLUS    &kp EQUAL
 &kp EQUAL  &kp PRCNT     &kp CARET    &kp AMPS     &kp STAR     &kp BSLH   &kp N0           &kp N1  &kp N2  &kp N3  &kp DOT     &trans
                              &trans     &trans     &trans    &trans        &trans     &trans       
                         >;
@@ -182,9 +182,9 @@ label= "NUM"                               ;
 
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
-&trans  &trans     &trans     &trans     &trans     &trans      &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_MINUS   &trans
-&trans  &trans     &trans     &trans     &trans     &trans      &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp KP_PLUS    &kp EQUAL
-&trans  &kp LEFT    &kp DOWN   &kp UP   &kp RIGHT   &trans        &kp N0           &kp N1  &kp N2  &kp N3  &kp DOT     &trans
+&trans  &trans     &trans     &trans     &trans     &trans      &kp KP_MULTIPLY  &kp F7  &kp F8  &kp F9  &kp KP_MINUS   &trans
+&trans  &trans     &trans     &trans     &trans     &trans      &kp KP_DIVIDE    &kp F4  &kp F5  &kp F6  &kp KP_PLUS    &kp EQUAL
+&trans  &kp LEFT    &kp DOWN   &kp UP   &kp RIGHT   &trans        &kp N0           &kp F1  &kp F2  &kp F3  &kp DOT     &trans
                               &trans     &trans     &trans      &trans           &trans  &trans
                         >;
                 };
